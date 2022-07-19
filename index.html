@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+    <head></head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="styloclaudia.css">
+        <title>claudia2</title>
+
+    </head>
+
+    <body>
+       <header class="header">
+        <div class="logo">
+            <img src="./imagens/masterburguerlogo.jpg">
+
+</div>
+        <nav>
+            
+            <ul class="menu">
+            <li><a href="contatos.html"></a>contato</li>
+            <li><a href=""></a>sobre</li>
+            
+        </ul>
+        </nav>
+    </header>
+        <h1>Cardápio</h1>
+        <section class="flex">
+            
+            <div>
+                <img src="./imagens/master burguer.jpg">
+                <p>MASTER BURGUER<b> R$12.00</b><br>
+                          COMBO<b> R$17.00</b>
+            </p>
+            </div>
+            <div>
+                <img src="./imagens/xtudo especial.jpg">
+                <p>XTUDO ESPECIAL<b> R$10.00</b><br>
+                          COMBO<b> 15.00</b> </p>
+            </div>
+            <div>
+                <img src="./imagens/xtudoespecialpicanha.jpg">
+                <p>XTUDO ESPECIAL DE PICANHA <b> R$ 13.00</b> <br>
+                              COMBO <b> R$ 18.00</b>
+                </p>
+            </div>
+
+
+        </section> 
+    
+        <script>
+            document.querySelectorAll('menu').forEach(link => {
+                link.onclick = function(e) {
+                    e.preventDefault()
+                    const flex = document.getElementsByClassName("menu")
+                    fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => menu.innerHTML = html)
+                }
+            })
+        </script>
+        </body>
+        <footer>Todos os direitos reservados a mim.:)</footer>
+        </html
